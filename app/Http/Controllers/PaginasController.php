@@ -7,6 +7,11 @@ use App\Servicio;
 
 class PaginasController extends Controller
 {
+    //Función para el inicio
+    public function inicio(){
+        return view('index');
+    }
+
     //Función para abrir la vista nosotros
     public function nosotros(){
     	return view('nosotros');
