@@ -22,6 +22,7 @@ class ProductosMigration extends Migration
             $table->integer('idestado')->unsigned();
             $table->foreign('idestado')->references('id')->on('estados');
             $table->integer('puntos');
+            $table->string('imagen')->nullable();
             $table->timestamps();
         });
     }
