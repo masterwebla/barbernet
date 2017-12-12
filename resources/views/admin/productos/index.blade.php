@@ -13,6 +13,7 @@
 					<th>Precio</th>
 					<th>Cantidad</th>
 					<th>Estado</th>
+					<th>Imagen</th>
 					<th>Editar</th>
 					<th>Borrar</th>
 				</tr>
@@ -24,6 +25,7 @@
 						<td>${{number_format($producto->precio,0,'', '.')}}</td>
 						<td>{{$producto->cantidad}}</td>
 						<td>{{$producto->estado->nombre}}</td>
+	<td><img src="{{ asset('images/'.$producto->imagen.'') }}" width="70" class="img-thumbnail"></td>
 						<td>
 							<a href="{{route('productos.edit',$producto->id)}}" class="btn btn-warning">
 								<i class="fa fa-pencil-square fa-2x"></i>
