@@ -7,11 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand" href="{{ route('inicio') }}"><img src="{{ asset('images/logo.png') }}"></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="{{route('servicios.index')}}">Servicios</a></li>
+        <li><a href="{{ route('inicio') }}"><i class="fa fa-home"></i></a></li>
+        <li class="active"><a href="{{route('productos.index')}}">Productos</a></li>
+        <li><a href="{{route('servicios.index')}}">Servicios</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="{{ route('perfiles.index') }}">Perfiles</a></li>
         <li><a href="{{ route('cupones.index') }}">Cupones</a></li>

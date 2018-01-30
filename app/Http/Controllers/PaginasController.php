@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Servicio;
+use App\Producto;
 
 class PaginasController extends Controller
 {
     //Función para el inicio
     public function inicio(){
-        return view('index');
+        $productos = Producto::orderBy('created_at','desc')->get();
+        return view('index',compact('productos'));
+    }
+
+    //Función para ver detalles de un producto
+    public function productoDetalles($id){
+        $producto = Producto::find($id);
+        return view('productodetalles',compact('producto'));
     }
 
     //Función para abrir la vista nosotros
