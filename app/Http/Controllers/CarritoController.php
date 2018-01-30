@@ -47,4 +47,12 @@ class CarritoController extends Controller
     }
 
     //Función para actualizar un item del carrito
+    public function actualizar($id, $cantidad){
+    	$carrito= Session::get('carrito');
+        $producto = Producto::find($id);
+        $carrito[$producto->id]->cantcompra = $cantidad;
+        Session::put('carrito',$carrito);
+        return redirect()->route('carrito');
+
+    }
 }

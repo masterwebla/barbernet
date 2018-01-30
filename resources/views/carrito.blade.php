@@ -30,8 +30,8 @@
 								<td>${{number_format($producto->precio,0)}}</td>
 
 								<td>
-									<input type="number" min="1" max="{{$producto->cantidad}}" value="{{$producto->cantcompra}}">
-									<a class="btn btn-warning" href="">
+									<input type="number" min="1" max="{{$producto->cantidad}}" id="producto_{{$producto->id}}" value="{{$producto->cantcompra}}">
+									<a class="btn btn-warning act" data-href="{{ route('carrito-actualizar', $producto->id) }}" data-id="{{ $producto->id }}">
 										<i class="fa fa-refresh"></i>
 									</a>
 								</td>

@@ -27,3 +27,5 @@ Route::get('/carrito',['as'=>'carrito','uses'=>'CarritoController@mostrar']);
 Route::get('/carrito/agregar/{id}',['as'=>'carrito-agregar','uses'=>'CarritoController@agregar']);
 Route::get('/carrito/vaciar',['as'=>'carrito-vaciar','uses'=>'CarritoController@vaciar']);
 Route::get('/carrito/borrar/{id}',['as'=>'carrito-borrar','uses'=>'CarritoController@borrar']);
+Route::get('carrito/actualizar/{id}/{cantidad?}',
+	['as'=>'carrito-actualizar','uses'=>'CarritoController@actualizar']);
