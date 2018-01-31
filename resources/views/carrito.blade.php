@@ -52,7 +52,7 @@
 		<div class="text-center">
 			<a class="btn btn-primary" href="{{ route('inicio') }}"><i class="fa fa-chevron-circle-left"></i> Seguir Comprando</a>
 			@if($carrito)
-				<a class="btn btn-success" href="#">Ordenar <i class="fa fa-chevron-circle-right"></i></a>
+				<a class="btn btn-success" href="{{ route('ordenar') }}">Ordenar <i class="fa fa-chevron-circle-right"></i></a>
 			@endif
 
 		</div>

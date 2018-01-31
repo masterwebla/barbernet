@@ -11,6 +11,11 @@ use App\Estado;
 
 class ServiciosController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('admin',['except'=>'index']);
+    }
+
     //Funcion para listar
     public function index(Request $request)
     {

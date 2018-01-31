@@ -29,3 +29,7 @@ Route::get('/carrito/vaciar',['as'=>'carrito-vaciar','uses'=>'CarritoController@
 Route::get('/carrito/borrar/{id}',['as'=>'carrito-borrar','uses'=>'CarritoController@borrar']);
 Route::get('carrito/actualizar/{id}/{cantidad?}',
 	['as'=>'carrito-actualizar','uses'=>'CarritoController@actualizar']);
+
+//Ruta para guardar una orden
+Route::get('ordenar',['as'=>'ordenar','uses'=>'CarritoController@ordenar'])->middleware('auth');
+Route::get('orden-detallada/{numero}',['as'=>'orden-detallada','uses'=>'CarritoController@ordenDetallada'])->middleware('auth');

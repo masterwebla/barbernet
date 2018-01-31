@@ -14,5 +14,10 @@ class Producto extends Model
     public function estado(){
     	return $this->hasOne('App\Estado','id','idestado');
     }
+
+    //Relación con el modelo Ordenproducto
+    public function ordenproducto(){
+    	return $this->belongsTo('App\Ordenproducto');
+    }
 }
 
