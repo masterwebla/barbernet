@@ -53,6 +53,8 @@ class ServiciosController extends Controller
             'puntos'=>$request->puntos
         ]);
 
+        
+
         //Enviar mail
         $nombreto = $request->nombre;
         $precioto = $request->precio;
@@ -60,11 +62,6 @@ class ServiciosController extends Controller
         Mail::to($emailto)->send(new ServicioCreado($nombreto,$precioto,$emailto));
 
         $mensaje = $servicio?'Servicio creado correctamente':'El servicio no se creo';
-        /*if($servicio){
-            $mensaje = "Servicio OK";
-        }else{
-            $mensaje = "No se pudo guardar el Servicio";
-        }*/
         return redirect()->route('servicios.index')->with('mensaje',$mensaje);
 
     }

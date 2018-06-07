@@ -11,8 +11,10 @@ Route::get('/producto-detalles/{id}',[
 ]);
 
 Route::get('/nosotros', 'PaginasController@nosotros');
+Route::get('/somosnosotros', 'PaginasController@nosotros');
 //Route::get('/productos', 'PaginasController@productos');
 //Route::get('/servicios', 'PaginasController@servicios');
+Route::get('/vue','PaginasController@vue');
 
 Route::resource('/perfiles','PerfilesController');
 Route::resource('/cupones','CuponesController');

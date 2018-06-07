@@ -14,6 +14,11 @@ class PaginasController extends Controller
         return view('index',compact('productos'));
     }
 
+    //función para vue
+    public function vue(){
+        return view('vue');
+    }
+
     //Función para ver detalles de un producto
     public function productoDetalles($id){
         $producto = Producto::find($id);
